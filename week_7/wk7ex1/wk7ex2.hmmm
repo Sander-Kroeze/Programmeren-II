@@ -1,0 +1,19 @@
+# Week 7 Opgave 2
+#
+# Naam: Sander Kroeze & Chris Wibbelink
+#
+# Hmmm...
+#
+# Dit is een voorbeeld; je moet deze code vervangen...
+#
+
+00 read r1          # lees getal van de gebruiker in r1
+01 read r2          # lees getal van de gebruiker in r2
+02 neg r2 r2        # zet r2 negatief
+03 setn r3 1        # geeft de waarde 1 aan r3
+04 jeqzn r2 08      # als r2 gelijk is aan 0 ga dan naar regel 08
+05 mul r3 r3 r1     # doe r3 keer r1 en schrijf het weg in r3
+06 addn  r2 1     # tel 1 bij r2 op
+07 jumpn 04         # ga naar regel 04
+08 write r3         # schrijf de waarde van r3
+09 halt

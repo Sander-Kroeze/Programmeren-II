@@ -1,0 +1,33 @@
+# Week 7 Opgave 4
+#
+# Naam: Sander Kroeze & Chris Wibbelink
+#
+# Hmmm...
+#
+# Dit is een voorbeeld; je moet deze code vervangen...
+#
+
+00 read r2         # lees getal van de gebruiker in r1    
+01 read r1         # lees getal van de gebruiker in r1
+02 setn r15 42     # geeft r15 de waarde 42
+03 call r14 6      # zet r14 op de adres na de huidige programmacounter, daarna wordt de counter op 6 gezet
+04 jumpn 22        # deze zet de programmacounter op 22
+05 nop             # 
+06 jnez r1 9       # als r1 gelijk is aan nul, ga naar regel 9
+07 setn r13 1      # geef r13 de waarde 1
+08 jumpr r14       # geef het resultaat terug waar het is aangeroepen, r14
+09 storer r1 r15   # sla de inhoud van r1 op in r15
+10 addn r15 1      # tel 1 bij r15 op
+11 storer r14 r15  # sla de inhoud van r14 op in r15
+12 addn r15 1      # tel 1 bij r15 op
+13 addn r1 -1      # doe 1 min r1
+14 call r14 6      # zet r14 op de adres na de huidige programmacounter, daarna wordt de counter op 6 gezet
+15 addn r15 -1     # doe 1 min r15
+16 loadr r14 r15   # laad r15 uit het geheugen op r14
+17 addn r15 -1     # doe 1 min r15
+18 loadr r1 r15    # laad r15 uit het geheugen op r1
+19 mul r13 r13 r2  # doe r13 keer r2, schrijf het in r13
+20 jumpr r14       # zet de counter op r14
+21 nop             # 
+22 write r13       # geef r13 weer
+23 halt            # einde

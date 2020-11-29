@@ -1,0 +1,22 @@
+# Week 7 Opgave 3
+#
+# Naam: Sander Kroeze & Chris Wibelink
+#
+# Hmmm...
+#
+# Dit is een voorbeeld; je moet deze code vervangen...
+#
+
+00 read r1              # lees getal van de gebruiker in r1
+01 setn r2 1            # geeft de waarde 1 aan r2
+02 setn r3 1            # geeft de waarde 1 aan r3
+03 neg r1 r1            # zet r1 negatief
+04 jeqzn r1 12          # als r1 gelijk is aan 0 ga dan naar regel 12
+05 write r2             # geeft r2 weer
+06 copy r4 r3           # zet de waarde van r3 in r4
+07 add r4 r4 r2         # doet r4 plus r2 en schrijft dit weg in r4
+08 copy r2 r3           # zet de waarde van r3 in r2
+09 copy r3 r4           # zet de waarde van r4 in r3
+10 addn r1 1            # telt 1 bij r1 op
+11 jumpn 04             # gaat naar regel 04
+12 halt
