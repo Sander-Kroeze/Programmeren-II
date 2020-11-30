@@ -13,7 +13,7 @@
 
 # make sure this is implemented!
 #from hw9pr1sols import next_life_generation
-from hw9pr1 import next_life_generation
+from hw9ex1 import next_life_generation
 
 import time
 from turtle import *
