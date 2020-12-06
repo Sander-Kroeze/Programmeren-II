@@ -73,12 +73,20 @@ class Date(object):
             return False
 
     def __lt__(self, d2):
+        """"
+            Met deze functie kun je heel makkelijk kijken of de daten voor de orginele datum komt.
+            Gebruik in de command line: d < d2
+        """
         if d2.year != self.year:
             return self.year < d2.year
 
         if d2.month != self.month:
             return self.month < d2.month
     def __gt__(self, d2):
+        """
+            Met deze functie kun je heel makkelijk kijken of de datum na de orginele datum komt.
+            Gebruik in de command line: d > d2
+        """
         if d2.year != self.year:
             return self.year > d2.year
 
@@ -88,14 +96,25 @@ class Date(object):
         return self.day > d2.day
 
     def __iadd__(self, n):
+        """
+            Met deze functie kun je heel makkelijk dagen bij een datum optellen.
+            Gebruik in de command line: d += 1
+        """
         self.day += n
         # print(self) # print de uitkomst gelijk, kan ook uit staan
 
     def __isub__(self, n):
+        """
+            Met deze functie kun je heel makkelijk dagen van een datum aftrekken.
+            Gebruik in de command line: d -= 1
+        """
         self.day -= n
         # print(self) # print de uitkomst gelijk, kan ook uit staan
 
     def is_before (self, d2):
+        """"
+            Deze functie kijkt of d2 voor de orginele datum is.
+        """
         if d2.year != self.year:
             return self.year < d2.year
 
@@ -105,6 +124,9 @@ class Date(object):
         return self.day < d2.day
 
     def is_after (self, d2):
+        """"
+            Deze funcite kijkt of d2 na de orginele datum is.
+        """
         if d2.year != self.year:
             return self.year > d2.year
 
@@ -114,6 +136,9 @@ class Date(object):
         return self.day > d2.day
     
     def tomorrow(self):
+        """"
+            Geeft de datum van een dag later weer van de orginele datum.
+        """
         fdays = 28 + self.is_leap_year()
         DIM = [0,31,fdays,31,30,31,30,31,31,30,31,30,31]
         self.day += 1
@@ -125,6 +150,9 @@ class Date(object):
                 self.month = 1
     
     def yesterday(self):
+        """
+            Geeft de datum van gister weer van de orginele datum.
+        """
         fdays = 28 + self.is_leap_year()
         DIM = [0,31,fdays,31,30,31,30,31,31,30,31,30,31]
         self.day -= 1
@@ -136,15 +164,24 @@ class Date(object):
             self.day = DIM[self.month]
     
     def add_n_days(self, n):
+        """
+            Voegt n aantal dagen toe aan de orinele datum.
+        """
         for i in range(n):
             self.tomorrow()
             # print(self) #gebruik deze regel om de dagen vooruit te printen
     
     def sub_n_days(self, n):
+        """
+            Haalt n aantal dagen van de orginele datum af.
+        """
         for i in range(n):
             self.yesterday()
     
     def diff (self, d):
+        """
+            Geeft het verschil in dagen weer tussen twee datums.
+        """
         cnt = 0
         d1 = self.copy()
         d2 = d.copy()
@@ -157,6 +194,9 @@ class Date(object):
         return cnt
 
     def dow (self):
+        """
+            Geeft de dag weer van een bepaalde datum.
+        """
         weekday = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
         return weekday[((3 + self.diff(Date(11, 12, 2014)))%7+7)%7] 
 
