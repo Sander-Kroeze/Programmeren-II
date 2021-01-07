@@ -1,7 +1,5 @@
 # Door Sander Kroeze
 class Board:
-
-
     def __init__ (self, width, height) :
         """ the constructor for objects of type Board """
         self.width = width
