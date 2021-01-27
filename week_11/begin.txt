@@ -1,0 +1,18 @@
+Begin.txt
+Sander Kroeze en Chris Wibbelink
+Klas: 1K
+
+Wij begonnen als basis met de code van wk11ex2.py zoals ook staat in de opdracht.
+Daarna hebben wij de code uit de opdracht gekopieerd voor het begin van de klasse Player en deze een beetje aangepast zodat hij werkt op onze begin code.
+Toen was de functie opp_ch() aan de beurt, hiermee krijg je de omgekeerde steen terug die de gebruiker gekozen heeft.
+Daarna was de functie score_board() aan de beurt, deze functie moet punten toe kennen op basis van de uitslag. Als de gebruiker wint 
+krijgt hij 100.0 punten, als de self niet wint of verliest moeten er 50.0 punten toegekent worden en 0.0 punten als self verloren heeft.
+
+Aangezien er asserts in de opdracht staan was dit onze manier van testen, dit geldt voor bij de methodes.
+Onze functies werkten niet meteen, dus was het steeds uitzoeken wat de fout was, de methode aanpassen en nog een keer testen.
+Tot dat er geen foutmeldingen meer waren. Voor het eerste inleverpunt is dit genoeg. Dus nog een keer testen in het geheel.
+En tot slot alle functies bij langs gaan om te kijken of ze allemaal al uitleg hebben staan in de dockstings. 
+Nadat dit ook klaar was hebben wij het ingeleverd.
+
+
+
