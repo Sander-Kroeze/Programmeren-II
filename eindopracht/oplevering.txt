@@ -1,0 +1,34 @@
+Door: Sander Kroeze en Chris Wibbelink
+
+Voor de oplevering besloten wij eerst als een volle rij vol is die te verwijderen
+Dit hadden we voor elkaar naar veel gedoe. Alleen toen wij de opdracht nog een keer lazen kwamen wij erachter dat het een horizontale rij moest zijn. 
+Want net zoals bij Tetris staat bij de opdracht. Eerlijk is eerlijk dit was niet zo snugger van ons.
+
+Toen wij hierachter kwamen hebben we toch besloten om een andere functie te kiezen. Aangezien we wel klaar waren om met de rijen te stoeien.
+Besloten wij te kiezen voor de eerste functie namelijk:
+Voeg een kans toe (bijvoorbeeld 10%) dat het spel de zet die je kiest totaal negeert en een willekeurige andere zet kiest...
+
+Uiteindelijk hebben wij deze functie gemaakt met:
+is_row_full() en de hulp functie Extract().
+Met de functie is_row_full krijgt de random zet waarde mee. Hiermee kijkt hij of een rij vol is. 
+Hij loopt elke keer, met de hulp van de hulp functie Extract door de inhoud heen en kijkt hij of het leeg is.
+Als het leeg is gaat hij gewoon verder met het doorheen lopen van de lijsten, als hij niet leeg is wordt er 1 bij de count opgeteld.
+Als count de waarde 6 heeft is de lijst vol, dan geeft de functie True terug. En wordt er dus een zet overgeslagen met een foutieve zet.
+
+In de functie play_game() hebben we wat extra opties toegevoegd; zo hebben we een aantal if-statements toegevoegd waarmee de kans berekend word.
+Als de kans dus lager is dan 20 procent doet de AI een random zet, dit varieerd tussen 0 en 6. 
+Als een randomnummer een rij is wat al vol zit, wat dus met de functie is_row_full() bekeken wordt, moet je een beurt overslaan.
+Dit gebeurd omdat de rij al vol zit en je daar dus niet nog een zet kan doen. Als de kans dus groter is dan 20 procent, dan doet de AI de normale zet die berekend is.
+
+Hoe voer je het spel uit:   
+Eerst moet je 2 spelers aanmaken, dit doe je met de volgende 2 commands, eerst moet je het besteand oplevering.py runnen natuurlijk:
+1: px = Player('X', 'LEFT', 3)
+2: po = Player('O', 'LEFT', 2)
+
+Daarna moet er nog een Board aangemaakt worden:
+3: b = Board(7, 6)
+
+Je start de game door het volgende commando uit te voeren:
+4: b.play_game(px, po)
+
+Veel kijk/speel plezier! ;)

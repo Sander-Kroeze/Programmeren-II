@@ -1,0 +1,13 @@
+Uitleg over milestone.py
+Door Chris Wibbelink & Sander Kroeze
+
+We begonnen met tiebreak_move, deze functie moet op basis van de score en strategie het juiste kolomnummer weergeven voor de volgende move. 
+Als er meerdere kolommen met een hoge score zijn dan kijkt de functie naar de strategie. 
+Als de strategie rechts (RIGHT) is pakt tiebreak_move de meest rechtse hoge score. 
+Het ding was dat de functie niet de hoogste score weer moest geven maar het kolomnummer van die hoogste score.
+Dit hebben wij gedaan met de variabele max_indices zodat de functie de goede uitkomst heeft.
+In de opdracht stonden al 2 asserts hierna hebben wij de laagste gemaakt voor de strategie RANDOM. 
+
+Daarna gingen we met de methode scores_for aan de slag. Deze methode moet een lijst teruggeven met scores, hier wordt de score aangegeven op goedheid van de zet van de speler.
+Deze methode krijgt eerst een lijst mee, deze lijst is even groot als het aantal kolommen van het meegeven board.
+Doormiddel van een For-loop lust hij door de lijst heen, ook wordt in deze lus nog eens recursie gebruikt.
